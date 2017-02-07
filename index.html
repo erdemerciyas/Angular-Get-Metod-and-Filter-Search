@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head lang="en">
+	<meta charset="utf-8">
+	<title>
+		Angular Tutorials
+	</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+	<script src="app.js"></script>
+
+</head>
+
+<body ng-controller="aplication">
+
+<div class="container" >
+<br>
+<form ng-submit="formUser()">
+	<input type="text" ng-model="username" placeholder="Kullanıcı Adı Ara" class="form-control">
+	<br>
+	<button class="btn btn-info">ARA</button>
+</form>
+<br>
+<h1>Kullanıcılar</h1>
+
+<table class="table table-striped">
+	
+	<tr ng-repeat="user in UserResult">
+		<td>{{user.id}}</td>
+		<td>{{user.name}}</td>
+		<td>{{user.email}}</td>
+		
+	</tr>
+
+</table>
+
+
+</div>
+
+
+
+
+</body>
+</html>
